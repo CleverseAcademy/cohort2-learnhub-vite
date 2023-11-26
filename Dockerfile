@@ -14,7 +14,7 @@ ENV NODE_ENV=development
 
 # Map build arguments to environment variable
 ENV VITE_API_HOST=${VITE_API_HOST}
-ENV VITE_VERSION=${VERSION}
+ENV VITE_VERSION=${VITE_VERSION}
 
 # Install pnpm.
 RUN --mount=type=cache,target=/root/.npm \
