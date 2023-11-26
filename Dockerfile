@@ -7,12 +7,14 @@ FROM node:${NODE_VERSION} as builder
 
 # Specify all necessary arguments at build time
 ARG VITE_API_HOST=http://localhost:8000
+ARG VITE_VERSION=dev
 
 # Use production node environment by default.
 ENV NODE_ENV=development
 
 # Map build arguments to environment variable
 ENV VITE_API_HOST=${VITE_API_HOST}
+ENV VITE_VERSION=${VITE_VERSION}
 
 # Install pnpm.
 RUN --mount=type=cache,target=/root/.npm \
