@@ -32,7 +32,7 @@ jobs:
         with:
           context: .
           build-args: |
-            VITE_API_HOST=http://45.76.181.219:8080
+            VITE_API_HOST=${{ vars.VITE_API_HOST }}
             VITE_VERSION=${{ github.ref_name }}@${{steps.params.outputs.SHORTENED_SHA}}
           push: true
           tags: ${{ vars.DOCKERHUB_USERNAME }}/${{ vars.IMAGE_NAME }}:${{ steps.params.outputs.REF_TAG }}-${{steps.params.outputs.SHORTENED_SHA}}
