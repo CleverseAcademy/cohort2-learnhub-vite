@@ -7,7 +7,7 @@ FROM node:${NODE_VERSION} as builder
 
 # Specify all necessary arguments at build time
 ARG VITE_API_HOST=http://localhost:8000
-ARG VERSION=dev
+ARG VITE_VERSION=dev
 
 # Use production node environment by default.
 ENV NODE_ENV=development
